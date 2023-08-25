@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    cursor: url('C:\Users\evisb\Desktop\C2\1.css'), auto;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.animation-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    background-color: #e74c3c;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.box:hover {
+    transform: rotate(45deg) scale(1.2);
+    background-color: #c0352b;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3498db;
+    color: white;
+}
+
+.interactive-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-slide:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-rotate:hover {
+    background-color: #f39c12;
+    color: white;
+    transform: rotate(45deg);
+}
+
+.btn-color:hover {
+    background-color: #2980b9;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pseudo-elements-section {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+}
+
+.pseudo-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+}
+
+.pseudo-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 400%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.pseudo-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.three-d-section {
+    background-color: #95a5a6;
+    padding: 50px 0;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.card-back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
